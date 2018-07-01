@@ -1,0 +1,98 @@
+.phoneBody{
+			position: relative;
+			height: 580px;
+			background: transparent url(../../resources/images/weixin/bg_mobile_head_default.png) no-repeat 0 0;
+			background-position: 0 0;
+			border: 1px solid #ccccce;
+		}
+		.phoneHead{
+			color: #fff;
+			text-align: center;
+			padding-top: 30px;
+			font-size: 15px;
+			width: auto;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			word-wrap: normal;
+			margin: 0 30px;
+		}
+		.phoneFoot{
+			height:50px;
+			margin:0;
+			list-style-type:none;
+			position: absolute;
+			bottom: 0; 
+			left: 0;
+			right: 0;
+			border-top: 1px solid #e7e7eb; 
+			background: transparent url(../../resources/images/weixin/bg_mobile_foot_default.png) no-repeat 0 0;
+			background-position: 0 0;
+			background-repeat: no-repeat;
+			padding-left: 43px;
+		}
+		.phoneFoot li{
+			font-size:14px;
+			line-height:50px ;
+			position: relative;
+			color: #616161;
+			text-align: center; 
+			height:100% ;
+		}
+		ul{
+			list-style-type: none;
+			padding: 0;
+		}
+		.phoneFootMemu{
+			border-left: 1px solid #e7e7eb;
+		}
+		.phoneFootSubMemu{
+			width:100%;    
+			border: 1px solid #d0d0d0;
+			position: absolute;
+			bottom: 60px; 
+			left:0
+		}
+		.phoneFootSubMemuItem{
+			display: list-item;
+			text-align: -webkit-match-parent;
+			border-bottom: 1px solid #e7e7eb;    
+			color: #616161;
+		}
+		.phoneFootSubMemuItemAdd{
+			display: inline-block;
+			width:14px; 
+			height:14px;
+			background: url(../../resources/images/weixin/mobile_foot_menu_add.png) 0 0 no-repeat ;
+		}
+		.phoneFootSubMemuItemArrowOut{
+			position: absolute;
+		    left: 50%;
+		    margin-left: -6px;
+			bottom: -6px;
+		    display: inline-block;
+		    width: 0;
+		    height: 0;
+		    border-width: 6px;
+		    border-style: dashed;
+		    border-color: transparent;
+		    border-bottom-width: 0;
+		    border-top-color: #d0d0d0;
+		    border-top-style: solid;
+		}
+		.phoneFootSubMemuItemArrowIn{
+			position: absolute;
+		    left: 50%;
+		    margin-left: -6px;
+			bottom: -5px;
+		    display: inline-block;
+		    width: 0;
+		    height: 0;
+		    border-width: 6px;
+		    border-style: dashed;
+		    border-color: transparent;
+		    border-bottom-width: 0;
+		    border-top-color: #fafafa;
+		    border-top-style: solid;
+		}
+		

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/Sun JDK 1.6.0_13">
+		<accessrules>
+			<accessrule kind="accessible" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_6_CONTAINER"/>
+	<classpathentry kind="lib" path="libs/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="libs/gson-2.3.jar"/>
+	<classpathentry kind="lib" path="libs/httpclient-4.2.5.jar"/>
+	<classpathentry kind="lib" path="libs/httpcore-4.2.4.jar"/>
+	<classpathentry kind="lib" path="libs/classes12.jar"/>
+	<classpathentry kind="lib" path="libs/mysql-connector-java-5.1.7-bin.jar"/>
+	<classpathentry kind="lib" path="libs/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="libs/axis-ant.jar"/>
+	<classpathentry kind="lib" path="libs/axis.jar"/>
+	<classpathentry kind="lib" path="libs/commons-discovery-0.2.jar"/>
+	<classpathentry kind="lib" path="libs/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="libs/jaxrpc.jar"/>
+	<classpathentry kind="lib" path="libs/saaj.jar"/>
+	<classpathentry kind="lib" path="libs/wsdl4j-1.5.1.jar"/>
+	<classpathentry kind="lib" path="libs/json-lib-2.4-jdk15.jar"/>
+	<classpathentry kind="lib" path="libs/commons-lang.jar"/>
+	<classpathentry kind="lib" path="libs/commons-collections.jar"/>
+	<classpathentry kind="lib" path="libs/ezmorph-1.0.6.jar"/>
+	<classpathentry kind="lib" path="libs/commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="libs/jacob.jar"/>
+	<classpathentry kind="lib" path="libs/teleware.base.jar"/>
+	<classpathentry kind="lib" path="libs/commons-httpclient-3.0.jar"/>
+	<classpathentry kind="lib" path="libs/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="libs/fastjson-1.2.16.jar"/>
+	<classpathentry kind="lib" path="libs/jjwt-0.6.0.jar"/>
+	<classpathentry kind="lib" path="libs/org.springframework.beans-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="libs/org.springframework.context-3.0.5.RELEASE.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/qianye.Core"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

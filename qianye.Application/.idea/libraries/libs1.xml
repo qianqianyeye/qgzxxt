@@ -1,0 +1,35 @@
+<component name="libraryTable">
+  <library name="libs1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/commons-lang.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/axis.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/jacob.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/httpclient-4.2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/log4j-1.2.14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/json-lib-2.4-jdk15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/httpcore-4.2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/commons-beanutils.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/commons-discovery-0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/axis-ant.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/mysql-connector-java-5.1.7-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/commons-httpclient-3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/ezmorph-1.0.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/saaj.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/commons-codec-1.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/wsdl4j-1.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/commons-logging-1.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/org.springframework.beans-3.0.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/classes12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/gson-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/jjwt-0.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/commons-collections.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/jaxrpc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/teleware.base.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/fastjson-1.2.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../qianye.Common/libs/org.springframework.context-3.0.5.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

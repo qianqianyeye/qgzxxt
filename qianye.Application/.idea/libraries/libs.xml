@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/gson-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/org.springframework.beans-3.0.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/json-lib-2.4-jdk15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/ojdbc6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/org.springframework.context-3.0.5.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/log4j-1.2.16.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

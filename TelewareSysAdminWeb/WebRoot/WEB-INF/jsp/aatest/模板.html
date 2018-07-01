@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>标题</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit">
+<link href="<%=basePath%>resources/css/reference/bootstrap.min.css" rel="stylesheet">
+<link href="<%=basePath%>resources/css/reference/font-awesome.min.css" rel="stylesheet">
+<link href="<%=basePath%>resources/css/reference/footable/footable.bootstrap.min.css" rel="stylesheet" type="text/css"></link>
+<link href="<%=basePath%>resources/css/reference/style.css" rel="stylesheet">
+<script type="text/javascript" src="<%=basePath%>resources/js/reference/jquery.min.js"></script>
+<script type="text/javascript" src="<%=basePath%>resources/js/reference/form/jquery.form.min.js"></script>
+<script type="text/javascript" src="<%=basePath%>resources/js/reference/jquery-validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="<%=basePath%>resources/js/reference/jquery-validation/messages_zh.min.js"></script>
+<script type="text/javascript" src="<%=basePath%>resources/js/reference/bootstrap.min.js"></script>
+<script type="text/javascript" src="<%=basePath%>resources/js/reference/footable/footable.min.js"></script>
+<script type="text/javascript" src="<%=basePath%>resources/js/reference/sweetalert/sweetalert.min.js"></script>
+<script type="text/javascript" src="<%=basePath%>resources/js/reference/mcui.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+		//index.jsp已修改完毕
+		
+		
+		$.mal({
+			text : '恭喜，密码修改成功！',
+			type : 'success'  //error  warning
+		});
+		
+		$.mal({
+			text : '您确定要退出本次登录吗?'
+		}, function() {
+			location.href = getProjectURL() + 'admin/loginout';
+		});
+		
+		
+		
+		
+		//如果不用click事件，button 请加 data-toggle="modal" data-target="#modal_add"
+		$("#add").click(function() {
+			$("#modal_add").modal('show');//hide
+		});
+		
+		
+		$("#xxx").click(function(){
+			var flag = $("#commentForm").valid();
+		    if(!flag){
+		        //没有通过验证
+		        return;
+		    }
+		  	//通过验证
+		    alert(1);
+		  	
+		    $('#fm').clearForm();
+		    
+		    $("#dlg").modal("show");
+		    
+		    $("#fm").mform(row);
+		    
+		    $("#fm").ajaxSubmit({
+		    	url:url,
+		    	success:function(result){
+		    		if (result == "true") {
+		    			$.mal({
+		    				text : '操作成功！',
+		    				type : 'success'
+		    			});
+						$("#dlg").modal("hide");
+						$("#flows").mtable("reload");
+					} else {
+						$.mal({
+		    				text : '操作失败！',
+		    				type : 'error'
+		    			});
+					}
+		    	},
+		    	beforeSubmit:function(){
+		    		return $("#fm").valid();
+		    	}
+		    });
+		    
+		    var msearch_name=$("#toolbar").find('[name=msearch_name]');
+			var msearch_value=$("#toolbar").find('[name=msearch_value]');
+			var msearch_sortName=$("#toolbar").find('[name=msearch_sortName]');
+			var msearch_sortValue=$("#toolbar").find('[name=msearch_sortValue]');
+			var name=msearch_name.val();
+			var value=msearch_value.val();
+			var sortName=msearch_sortName.val();
+			var sortValue=msearch_sortValue.val();
+			
+			var forms = $("#formInit_flows").mtable("getSelected");
+		  	
+		    Web.initTenantSelect2($("#search_tenant"), function() {
+				$("#search_tenant").parent().show();
+			}, function(record) {
+				searchFlow();
+			});
+		    
+		    function initTable(){
+		    	$("#toolbar").mboxtoolbar({
+		    		"search" : {
+		    			texts : [ {
+		    				text : "平台流程ID",
+		    				value : "flowId"
+		    			}, {
+		    				text : "流程名称",
+		    				value : "flowName"
+		    			}, {
+		    				text : "ID",
+		    				value : "id"
+		    			}, {
+		    				text : "流程类别",
+		    				value : "applyKind"
+		    			}, {
+		    				text : "系统代码",
+		    				value : "appCode"
+		    			}, {
+		    				text : "数据源",
+		    				value : "dbName"
+		    			} ],
+		    			sorts:[ {
+		    				text : "平台流程ID",
+		    				value : "flowId"
+		    			}, {
+		    				text : "流程名称",
+		    				value : "flowName"
+		    			}, {
+		    				text : "ID",
+		    				value : "id"
+		    			}, {
+		    				text : "流程类别",
+		    				value : "applyKind"
+		    			}, {
+		    				text : "系统代码",
+		    				value : "appCode"
+		    			}, {
+		    				text : "数据源",
+		    				value : "dbName"
+		    			} ],
+		    			onClick : function(value) {
+		    				searchFlow(value);
+		    			}
+		    		}
+		    	});
+		    	$('#flows').mtable({
+		    		"url" : "flow/searchWithOrder",
+		    		"operSwitch" : [ {
+		    			icon : 'fa fa-pencil-square-o',
+		    			method : "updateFlow",
+		    		}, {
+		    			icon : 'fa fa-trash-o the-icons-red',
+		    			method : "deleteFlow",
+		    		},{
+		    			icon : 'fa fa-adjust',
+		    			method : "formInit",
+		    		} ],
+		    		columns : [ {
+		    			name : "id",
+		    			title : "ID"
+		    		}, {
+		    			name : "flowId",
+		    			title : "平台流程ID"
+		    		}, {
+		    			name : "appCode",
+		    			title : "系统代码",
+		    			breakpoints : "xs sm md lg"
+		    		}, {
+		    			name : "enabled",
+		    			title : "是否启用",
+		    			breakpoints : "xs sm md lg",
+		    			formatter : function(value, options, rowData) {
+		    				if (value == "true") {
+		    					return "已启用";
+		    				}
+		    				return "未启用";
+		    			}
+		    		}, {
+		    			name : "dbName",
+		    			title : "数据源",
+		    			breakpoints : "xs sm md lg"
+		    		}, {
+		    			name : "actions",
+		    			title : "动作列表",
+		    			breakpoints : "xs sm md lg"
+		    		}]
+		    	});
+		    }
+		  	
+		});
+		
+	})
+</script>
+</head>
+<body>
+	
+<!-- 	<div style="height: 300px">
+		<button id="add" data-toggle="modal" data-target="#modal_add">modal按钮</button>
+	</div> -->
+	弹出框
+	<div class="modal inmodal fade" id="dlg" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">×</span><span class="sr-only">Close</span>
+					</button>
+					<h4 id="dlg_title" class="modal-title"></h4>
+				</div>
+				<div class="modal-body">
+					<form id="fm" method="post" class="form-horizontal">
+					 <input type="text" id="id" name="id" style="display: none" />
+						<div class="form-group">
+							<label class="col-sm-2 control-label">数据源</label>
+							<div class="col-sm-10">
+								<div style="width: 100%; display: flex;">
+									<div style="flex:1;padding-right: 20px">
+										<input class="form-control" type="text" id="dbName" name="dbName" required  />
+									</div>
+									<div>
+										<button class="btn btn-primary btn-toolbar" type="button" onclick="initPlatformFlow()">
+											<i class="fa fa-plus"></i>&nbsp;初始化
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">平台流程ID</label>
+							<div class="col-sm-10">
+								<input class="form-control" type="text" id="flowId" name="flowId" digits=true />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">流程名称</label>
+							<div class="col-sm-10">
+								<input class="form-control" type="text" id="flowName" name="flowName" required />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">流程类别</label>
+							<div class="col-sm-10">
+								<input class="form-control" type="text" id="applyKind" name="applyKind" required />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">系统代码</label>
+							<div class="col-sm-10">
+								<input class="form-control" type="text" id="appCode" name="appCode" required />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">是否启用</label>
+							<div class="col-sm-10">
+								<input type="radio" name="enabled" value="true" checked="checked" /> 是 <input type="radio" name="enabled" value="false" /> 否
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">动作列表</label>
+							<div class="col-sm-10">
+								<input class="form-control" type="text" id="actions" name="actions" required />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">根地址</label>
+							<div class="col-sm-10">
+								<input class="form-control" type="text" id="rootUrl" name="rootUrl" required />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">备注</label>
+							<div class="col-sm-10">
+								<textarea class="form-control" id="remark" name="remark"></textarea>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+					<button  onclick="save()" type="button" class="btn btn-primary">保存</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	<div style="display: inline-block;">
+				<button class="btn btn-primary" type="button" onclick="ShowAddDialog()">
+					<i class="fa fa-plus"></i>&nbsp;添加
+				</button>
+				<button class="btn btn-primary" type="button" onclick="ShowUpdateDialog()">
+					<i class="fa fa-pencil"></i>&nbsp;修改
+				</button>
+				<button class="btn btn-primary" type="button" onclick="RemoveAppSet()">
+					<i class="fa fa-minus"></i>&nbsp;删除
+				</button>
+				<span style="display: block;">租户：<select id="search_tenant" name="search_tenant" class="form-control m-b ibox-ty-sty " /> </select>
+			</div>
+			
+	<div class="row footable-ibox-model">
+		<div class="ibox-title ibox-notitle">
+			<h5>流程配置</h5>
+		</div>
+		<div class="ibox-toolbar" id="toolbar">
+			<div id="search_tenant_div" class="ibox-toolbar-tenant">
+				<select id="search_tenant" name="search_tenant" class="form-control m-b ibox-ty-sty " /> </select>
+			</div>
+			<div class="ibox-toolbar-butdiv" style="display: inline-block;padding: 0">
+				<button class="btn btn-primary btn-toolbar" type="button" onclick="addFlow()">
+					<i class="fa fa-plus"></i>&nbsp;添加
+				</button>
+			</div>
+		</div>
+		<div class="ibox-content">
+			<table id="flows" class="table table-striped"></table>
+		</div>
+	</div>		
+			
+			
+</body>
+</html>

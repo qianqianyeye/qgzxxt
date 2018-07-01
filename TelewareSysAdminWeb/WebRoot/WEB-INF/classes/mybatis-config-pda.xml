@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<properties resource="jdbc.properties">
+	</properties>
+	
+	<typeAliases>
+		<package name="qianye.core.domain.model" />
+	</typeAliases>
+	
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${jdbc.driverClassName}" />
+				<property name="url" value="${jdbc.url}" />
+				<property name="username" value="${jdbc.username}" />
+				<property name="password" value="${jdbc.password}" />
+				<property name="poolMaximumActiveConnections" value="20" />
+				<property name="poolMaximumIdleConnections" value="5" />
+				<property name="poolMaximumCheckoutTime" value="20000" />
+				<property name="poolTimeToWait" value="20000" />
+			</dataSource>
+			<!-- <dataSource type="RHEA_BONECP"> <property name="driverClass" value="${jdbc.driverClassNamer}" /> <property name="jdbcUrl" value="${jdbc.urlr}" /> <property name="username" value="${jdbc.usernamer}" /> <property name="password" value="${jdbc.passwordr}" /> <property name="maxConnectionsPerPartition" value="${jdbc.maxConnectionsPerPartition}" /> <property name="minConnectionsPerPartition" value="${jdbc.minConnectionsPerPartition}" /> <property name="partitionCount" value="${jdbc.partitionCount}" 
+				/> <property name="connectionTimeoutInMs" value="${jdbc.connectionTimeout}" /> <property name="acquireIncrement" value="${jdbc.acquireIncrement}" /> <property name="releaseHelperThreads" value="${jdbc.releaseHelperThreads}" /> <property name="idleMaxAgeInMinutes " value="${jdbc.idleMaxAgeInMinutes}" /> <property name="idleConnectionTestPeriodInMinutes" value="${jdbc.idleConnectionTestPeriodInMinutes}" /> <property name="poolAvailabilityThreshold" value="${jdbc.poolAvailabilityThreshold}" /> </dataSource> -->
+		</environment>
+		</environments>
+		<mappers>
+		<!-- 接口所涉及的dao xml -->
+				
+		<!-- <mapper resource="qianye/pda/infrastructure/repository/mapper/MessageModelMapper.xml"/> -->
+		<mapper resource="qianye/pda/infrastructure/repository/mapper/ModuleMapper.xml"/> 
+		</mappers>
+	
+</configuration>

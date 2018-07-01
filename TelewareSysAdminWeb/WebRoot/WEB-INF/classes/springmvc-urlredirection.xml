@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"  
+    xmlns:context="http://www.springframework.org/schema/context"  
+    xmlns:mvc="http://www.springframework.org/schema/mvc"  
+    xsi:schemaLocation="   
+           http://www.springframework.org/schema/beans   
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd   
+           http://www.springframework.org/schema/context   
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd  
+           http://www.springframework.org/schema/mvc   
+           http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+    
+    <!-- 这里进行跳转配置路由, 相关配置页面的 路由重定向的配置信息内容 -->
+    <mvc:view-controller path="/devicemain" view-name="device/deviceindex"/>
+    <mvc:view-controller path="/devicetree" view-name="device/devicetreeuser"/>
+    <mvc:view-controller path="/busysconfig" view-name="businessconfig/busysconfig"/>
+    <mvc:view-controller path="/upgradeconfig" view-name="upgradeconfig/upgradeconfig"/>
+    <mvc:view-controller path="/addsudoconfig" view-name="businessconfig/addsudoconfig"/>
+    <mvc:view-controller path="/addsubconfig" view-name="businessconfig/addsubconfig"/>
+    <mvc:view-controller path="/addchildsubcfg" view-name="businessconfig/addchildsubcfg"/>
+    <mvc:view-controller path="/routeconfig" view-name="routecfg/routeconfig"/>
+    <mvc:view-controller path="/adminlogin" view-name="login/adminlogin"/>
+    <mvc:view-controller path="/dimecode" view-name="dimecode/dimencode"/>
+    <mvc:view-controller path="/contentmange" view-name="contentconfig/contentpubmange"/>
+    <mvc:view-controller path="/addcontentpub" view-name="contentconfig/addcontentpublish"/>
+    <mvc:view-controller path="/addattachmange" view-name="contentconfig/addattachmange"/>
+    <mvc:view-controller path="/errorlog" view-name="log/errorlog"/>
+    <mvc:view-controller path="/actoruser" view-name="contentflow/actoruser"/>
+    <mvc:view-controller path="/actorconfig" view-name="contentflow/actorconfig"/>
+    
+</beans>

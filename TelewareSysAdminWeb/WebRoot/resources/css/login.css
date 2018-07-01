@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+*{font-size: 18px;font-family: 	arial;}
+.main_box {
+	position: absolute; 
+	top:50%; 
+	left:50%; 
+	margin-top:-260px;
+    margin-left:-300px;
+    padding: 30px; 
+    width:600px; 
+	background:url(../images/1.png);
+    border-radius: 10px;
+}
+.main_box .setting {position: absolute; top: 5px; right: 10px; width: 10px; height: 10px;}
+.main_box .setting a {color: #FF6600;}
+.main_box .setting a:hover {color: #555;}
+.login_logo { height: 45px; text-align: center;}
+.login_logo img {height: 45px;}
+.login_msg {text-align: center; }
+.login_form {padding-top: 20px; }
+.login_box .form-control {height:26px;font-size: 16px;display: inline-block; *display: inline;box-sizing:content-box ; zoom: 1; width: auto; }
+.login_box .form-control.x319 {width: 319px;}
+.login_box .form-control.x164 {width: 164px;}
+.login_box .form-group {margin-bottom: 20px;}
+.login_box .form-group .textbox .textbox-text  {font-size: 16px;}
+.login_box .form-group label.t {width: 120px; text-align: right; cursor: pointer;}
+.login_box .form-group.space {padding-top: 15px; border-top: 1px #FFF dotted;}
+.login_box .form-group img {margin-top: 1px; height: 32px; vertical-align: middle;}
+.login_box .m {cursor: pointer;}
+.bottom {text-align: center; font-size: 12px;}

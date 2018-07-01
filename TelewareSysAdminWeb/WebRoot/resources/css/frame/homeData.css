@@ -1,0 +1,170 @@
+.portlet{
+	margin-top: 0;
+	margin-bottom: 25px;
+	padding: 0;
+	border-radius: 4px;
+}
+.portlet.light{
+	padding: 12px 20px 15px;
+	background-color: #fff;
+}
+.portlet.light.bordered{
+	border:1px solid #e7ecf1!important;
+}
+.distance-lg{
+	float: left;
+	width: 96%;
+	margin-left: 2%;
+}
+.distance-md{
+	float: left;
+	width: 47%;
+	margin-left: 2%;
+}
+.divContainer{
+	width: 100%;
+	height: 400px;
+} 
+#divFlag{
+	width: 15%;
+	height: 3px;
+	background-color: #396fff;
+	margin-left: 10%;
+}
+ //姘旀场鍥炬牱寮�
+.tagBall {
+    position: relative;
+    width:400px;
+    height:300px;
+    top:200px;
+    left:200px;
+}
+
+.tag {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    color: white;
+    font-weight: bold;
+    cursor:pointer;
+    text-decoration: none;
+    font-size: 14px;
+    white-space:nowrap;          涓嶆崲琛�   white-space:nowrap; 
+    border-radius: 50%;
+    margin: 0;
+    background: #5eb6f9;  height: 100px; width: 100px;  line-height: 100px;
+    text-align: center;
+}
+
+.tag:hover {
+    opacity: 1.5;
+}
+
+.panelBlock{
+	height: 100%;border-radius: 4px;
+}
+
+.panelBlock .content{
+	height: 80px;font-size: 30px;padding-top: 35px;text-align: center;
+}
+
+.panelBlock .remark{
+	text-align: center;
+} 
+/* 气泡图样式 */
+.mainDiv{
+	width: 100%;
+	display: table
+}
+.leftDiv{
+	display: table-cell;
+	width: 50%;
+}
+width-lg{
+	font-size: 20px;
+	background: #f2686a;  
+	height: 150px; 
+	width: 150px;  
+	line-height: 150px;
+}
+width-md{
+	font-size: 16px;
+    background: #396fff;  
+    height: 120px; 
+    width: 120px;  
+    line-height: 120px;
+}
+width-sm{
+	font-size: 14px;
+}
+width-xm{
+	font-size: 14px;
+	background: #5eb6f9;  
+	height: 50px; 
+	width: 50px;
+	opacity: 0.5;
+	pointer-events:none;
+}
+width-mm{
+	font-size: 14px;
+	background: #5eb6f9;  
+	height: 20px; 
+	width: 20px;
+	opacity: 0.5;
+	pointer-events:none;
+}
+.rightDiv{
+	display: table-cell;
+	width: 50%;
+	vertical-align: top;
+	padding-top: 200px;
+}
+#appNum{
+	margin-right: 8px;display: inline-block;
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 22px;
+    border-radius: 50%;
+    background-color: #f34b60;
+    color: #fff;
+}
+#appName{
+	height: 22px;
+	font-size: 22px;
+	line-height: 22px;
+	color: #f34b60;
+	display: inline-block;
+}
+.dataActive{
+	color: #b0b8bf;
+	font-size: 14px;
+	padding: 15px 0px 0px 0px;
+}
+#dataActive{
+	color:black;
+	font-size: 24px;
+	margin: 0;
+}
+.person{
+	margin-top: 8px;
+}
+.firstSpan{
+	width:100px;
+	padding: 0px 10px 0 0;
+}
+
+.ball_large{
+	font-size: 20px; background: #f2686a;  height: 150px; width: 150px;  line-height: 150px;
+}
+.ball_middle{
+	font-size: 16px; background: #396fff;  height: 120px; width: 120px;  line-height: 120px;
+}
+.ball_small{
+	
+}
+.ball_empty{
+	font-size: 14px;background: #5eb6f9;  height: 50px; width: 50px;opacity: 0.5;pointer-events:none;
+}

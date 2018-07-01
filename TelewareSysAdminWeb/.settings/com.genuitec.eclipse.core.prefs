@@ -1,0 +1,4 @@
+#Mon Nov 20 15:53:35 CST 2017
+eclipse.preferences.version=1
+validator.Checked=WebRoot
+validator.Unchecked=WebRoot/resources/js/web/weixin/wxuser.js

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"  
+    xmlns:context="http://www.springframework.org/schema/context"  
+    xmlns:aop="http://www.springframework.org/schema/aop" 
+    xmlns:mvc="http://www.springframework.org/schema/mvc"  
+    xsi:schemaLocation="   
+           http://www.springframework.org/schema/beans   
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd   
+           http://www.springframework.org/schema/context   
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd  
+           http://www.springframework.org/schema/mvc   
+           http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+           http://www.springframework.org/schema/aop 
+		   http://www.springframework.org/schema/aop/spring-aop.xsd">
+    
+    <!-- 启动扫描所有的controller -->
+    <context:component-scan base-package="qianye.pda"/>
+
+	<!-- 告诉视图解析器，返回的类型为json格式 -->
+	<!-- ModelAndView里的数据变成JSON -->
+   <!--  <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+        <property name="mediaTypes">
+            <map>
+                <entry key="html" value="text/html" />  
+                <entry key="pdf" value="application/pdf" />  
+                <entry key="xsl" value="application/vnd.ms-excel" />  
+                <entry key="xml" value="application/xml" />  
+                <entry key="json" value="application/json" />
+            </map>
+        </property>
+        <property name="defaultViews">
+            <list>
+                <bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView" />
+            </list>
+        </property>
+    </bean> -->
+<!--    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">  
+	   <property name="messageConverters">  
+	   <list>  
+	   <ref bean="jsonHttpMessageConverter"/>  
+	   </list>  
+	   </property>  
+	</bean> 
+	
+    <bean id="jsonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">    
+	    <property name="supportedMediaTypes">    
+	        <list>    
+	            <value>text/html;charset=UTF-8</value>    
+	        </list>    
+	    </property>    
+	</bean> -->
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+	    <property name="messageConverters">
+	        <list>
+	            <bean id="utf8StringHttpMessageConverter" 
+       				 class="qianye.pda.presentation.converter.UTF8StringHttpMessageConverter" />
+	        	<bean id="jsonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">    
+				    <property name="supportedMediaTypes">    
+				        <list>    
+				            <value>text/html;charset=UTF-8</value>    
+				        </list>    
+				    </property>    
+				</bean>
+	        </list>
+	    </property>
+	</bean> 
+    
+    <mvc:annotation-driven/>
+    
+  
+    <!-- 配置js，css等静态文件直接映射到对应的文件夹，不被DispatcherServlet处理 -->
+    <mvc:resources location="/resources/**" mapping="/resources"/>
+    
+	<!-- 静态资源访问 配置-->
+    <mvc:default-servlet-handler/>
+    
+    
+    <!-- jsp页面解析器，当Controller返回XXX字符串时，先通过拦截器，然后该类就会在/resources/jsp/目录下，查找XXX.jsp文件-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    	<property name="prefix" value="/WEB-INF/jsp/"></property>
+    	<property name="suffix" value=".jsp"></property>
+    </bean>
+    
+    
+     <!-- 支持上传文件 -->  
+    <bean id="multipartResolver"  
+        class="org.springframework.web.multipart.commons.CommonsMultipartResolver" >
+    	    <!-- 指定所上传文件的总大小不能超过5000KB。注意maxUploadSize属性的限制不是针对单个文件，而是所有文件的容量之和 --> 
+        <property name="maxUploadSize" value="52428800000"/>
+        <property name="maxInMemorySize">  
+           <value>2048</value>  
+        </property> 
+    </bean>  
+    
+    
+    <!-- SpringMVC在超出上传文件限制时，会抛出org.springframework.web.multipart.MaxUploadSizeExceededException --> 
+    <!-- 该异常是SpringMVC在检查上传的文件信息时抛出来的，而且此时还没有进入到Controller方法中 --> 
+    <bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver"> 
+        <property name="exceptionMappings"> 
+            <props> 
+                <!-- 遇到MaxUploadSizeExceededException异常时，自动跳转到/WEB-INF/jsp/error_fileupload.jsp页面 --> 
+                <prop key="org.springframework.web.multipart.MaxUploadSizeExceededException">error</prop> 
+            </props> 
+        </property> 
+    </bean>
+
+</beans>

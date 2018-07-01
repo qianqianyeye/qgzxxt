@@ -1,0 +1,216 @@
+.cardremark {
+	font-size: 10px;
+	color: #787878;
+	line-height: 20px;
+	word-break: break-all;
+}
+
+.selectType {
+	font-family: "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB",
+		STHeiti, "Microsoft YaHei", sans-serif;
+	font-size: 14px;
+}
+tr td{
+	font-family: "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB",
+		STHeiti, "Microsoft YaHei", sans-serif;
+	font-size: 14px;
+}
+.attendance_setting_rightCan_item .js_selecttime_item{
+	font-family: "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB",
+		STHeiti, "Microsoft YaHei", sans-serif;
+	font-size: 14px;
+}
+
+.timesetlable {
+	font-family: "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB",
+		STHeiti, "Microsoft YaHei", sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.cardoperate {
+	position: absolute;
+	bottom: 0px;
+	left: 0px; font-size : 14px;
+	background-color: #eee;
+	font-size: 14px;
+}
+.ww_timePicker_info {
+    border: 1px solid #95A0AB;
+    width: 90px;
+    height: 25px;
+    padding: 2px 13px;
+    line-height: 20px;
+    font-size: 13px;
+    border-radius: 2px;
+}
+
+
+.ww_timePicker {
+    position: relative;
+    display: inline-block;
+    padding-top: 5px;
+}
+
+.attendance_setting_general .ww_btnWithMenu, .attendance_setting_general .ww_timePicker {
+    vertical-align: top;
+}
+
+.ww_timePicker_info_ipt {
+    padding: 0 4px;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #4475A7;
+    text-decoration: underline;
+}
+
+
+.ww_dialog_SpecialDate .ww_dialog_body {
+    padding: 25px 40px 0 15px;
+    font-size: 13px;
+    overflow: visible;
+}
+
+.attendance_setting_general_label {
+    margin-right: 10px;
+    line-height: 26px;
+    font-size: 15px;
+    padding-top:5px;
+    font-family: "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB",
+		STHeiti, "Microsoft YaHei", sans-serif;
+}
+.ww_timePicker_info_colon {
+    position: relative;
+    top: -1px;
+    display: block;
+    overflow: hidden;
+    padding: 0 5px;
+    text-align: center;
+}
+
+.ww_timePicker_info_ipt_Hour {
+    float: left;
+}
+.ww_timePicker_info_ipt_Minute {
+    float: right;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+li, ol, ul {
+    list-style: none;
+    background-color:white;
+}
+.ww_dropdownMenu_item {
+    text-align: left;
+}
+
+.smart_menu_box, .ww_btnWithMenu .ww_dropdownMenu {
+    display: none;
+    position: absolute;
+    min-width: 101px;
+    top: 30px;
+}
+.ww_timePicker_hour, .ww_timePicker_minute {
+    display: none;
+    max-height: 255px;
+    overflow: auto;
+}
+
+.ww_timePicker .smart_menu_box, .ww_timePicker .ww_dropdownMenu {
+    top: 28px;
+    min-width: 60px;
+}
+
+.ww_dropdownMenu_itemLink_text {
+    display: inline-block;
+    padding-left:-30px;
+    margin-left:-13px;
+    vertical-align: top;
+    font-family: "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB",
+		STHeiti, "Microsoft YaHei", sans-serif;
+    font-size:13px;
+}
+
+.ww_timePicker_hour {
+    left: 0;
+}
+.ww_timePicker_minute{
+	left:30;
+}
+
+.ww_dropdownMenu_itemLink {
+    white-space: nowrap;
+}
+.smart_menu_box a, .ww_dropdownMenu a {
+    color: #000;
+}
+
+.smart_menu_box, .ww_dropdownMenu {
+    padding: 2px 0;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 6px 0 rgba(0,0,0,.3);
+    -moz-box-shadow: 0 1px 6px 0 rgba(0,0,0,.3);
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,.3);
+}
+/*
+.qui_dropdownMenu, .smart_menu_box {
+    position: absolute;
+    z-index: 30;
+    background: #fff;
+    border: none;
+}
+
+.ww_dropdownMenu_item {
+    text-align: left;
+}
+
+.ww_commonImg {
+    display: inline-block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}*/
+
+
+.ww_timePicker .smart_menu_a, .ww_timePicker .ww_dropdownMenu_itemLink {
+    padding-left: -36px;
+    padding-right: 0px;
+}
+.ww_btnWithMenu .smart_menu_a, .ww_btnWithMenu .ww_dropdownMenu_itemLink {
+    white-space: nowrap;
+}
+.smart_menu_box a, .ww_dropdownMenu a {
+    color: #000;
+}
+.qui_dropdownMenu_itemLink, .smart_menu_a {
+    display: block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0px;
+    color: #000;
+}
+a {
+    color: #4475A7;
+    text-decoration: none;
+}
+
+
+.attendance_setting_general_advancedsetting .attendance_setting_labelName {
+    cursor: pointer;
+    width: 80px;
+    color: #4475A7;
+}
+
+.attendance_setting_labelName {
+    float: left;
+    color: #787878;
+    width: 94px;
+    text-align: right;
+    position: relative;
+    margin-left: 20px;
+}

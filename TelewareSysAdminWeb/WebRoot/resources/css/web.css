@@ -1,0 +1,35 @@
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+.dialog_table_leftTd{
+	text-align: right;
+	font-size: 15px;
+}
+
+.dialog_table_rightTd{
+	text-align: left;
+	font-size: 15px;
+}
+
+.dialog_web{
+	background-color: #F2F2F2;
+	padding: 10px 70px;
+}
+
+.dialog_background{
+	background-color: #F2F2F2;
+}
+
+.textbox,.textbox-text{
+	height:20px;
+	margin:0;
+	padding:0 5px;
+	box-sizing:content-box;
+}
+
+span.textbox,span.textbox-text,span > textbox,span > .textbox-text{
+	padding:0;
+	box-sizing:content-box;
+}

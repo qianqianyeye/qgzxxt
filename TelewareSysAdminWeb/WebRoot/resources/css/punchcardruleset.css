@@ -1,0 +1,101 @@
+.cardremark {
+	font-size: 10px;
+	color: #787878;
+	line-height: 20px;
+	word-break: break-all;
+}
+
+.selectType {
+	font-family: "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB",
+		STHeiti, "Microsoft YaHei", sans-serif;
+	font-size: 13px;
+}
+
+.attendance_data {
+	width: 355px;
+	max-height: 135px;
+	border: 1px solid #B4BEC8;
+	overflow-y: auto;
+	overflow-x: hidden;
+	margin-top: 10px;
+	font-size: 13px;
+}
+
+.attendance_data_item {
+	margin-left: -30px;
+}
+
+li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+
+li,ol,ul {
+	list-style: none;
+}
+
+.attendance_data_item_left {
+	float: left;
+	margin-right: 3px;
+	width: 120px;
+}
+
+.attendance_data_item_operate {
+	float: right;
+	margin: -1px 0 0 10px;
+	color: #4475a7;
+}
+
+.attendance_data_item_info {
+	overflow: hidden;
+	zoom: 1;
+	color: #787878;
+	padding-left: 0px;
+}
+
+.attendance_data_item_info_location {
+	float: left;
+	width: 185px;
+}
+
+.attendance_data_item_operate a {
+	vertical-align: middle;
+	-webkit-tap-highlight-color: transparent;
+}
+
+a {
+	color: #4475A7;
+	text-decoration: none;
+}
+
+tr td {
+	font-family: "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB",
+		STHeiti, "Microsoft YaHei", sans-serif;
+	/* font-size: 15px; */
+}
+
+
+.ww_groupSelBtn_item {
+    float: left;
+    max-width: 231px;
+    line-height: 1.5;
+    margin: 3px 10px 3px 0;
+    padding: 3px 11px 3px 7px;
+    background-color: #fff;
+    border: 1px solid #E4E6E9;
+    border-radius: 2px;
+}
+
+
+.ww_commonImg {
+    display: inline-block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+
+.ww_groupSelBtn_item .ww_commonImg_GroupDelSel{
+    float: right;
+    margin-top: 5px;
+    cursor: pointer;
+}

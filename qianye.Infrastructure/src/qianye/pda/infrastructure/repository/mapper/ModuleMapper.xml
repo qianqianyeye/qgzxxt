@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="qianye.interfaces.dao.order.Module.IModuleDao">
+      <resultMap id="PdaModuleResultMap" type="Module">
+	        <result property="menuid" column="MENUID" />
+	        <result property="icon" column="ICON" />
+	        <result property="menuname" column="MENUNAME" />
+	        <result property="url" column="URL" />
+	        <result property="pmenuid" column="PMENUID" />
+	        <result property="tenantid" column="TENANTID" />
+    </resultMap>
+   
+     <select id="findPdaModuleByKey" parameterType="java.util.Map" resultType="Module">
+        select * from MODULE 
+        <where>
+            	1=1
+        	<if test="menuid != null and menuid != ''">  
+                and MENUID = #{menuid}
+            </if>  
+        	<if test="icon != null and icon != ''">  
+               and ICON = #{icon}
+            </if>  
+            <if test="pmenuid != null and pmenuid != ''">  
+               and PMENUID = #{pmenuid}
+            </if>  
+        	<if test="menuname != null and menuname != ''">  
+               and MENUNAME = #{menuname}
+            </if>  
+            <if test="tenantId != null and tenantId != ''">  
+               and TENANTID = #{tenantId}
+            </if> 
+		</where>
+    </select>
+    
+    
+    <!--  <select id="findPdaModulePidByKey" parameterType="java.util.Map" resultType="Module">
+        select t.BSM, t.MENUID,t.MENUNAME,t.ICON,t.URL from Module t
+        <where>
+            	1=1
+        	<if test="menuid != null and menuid != ''">  
+                and MENUID = #{menuid}
+            </if>  
+        	<if test="icon != null and icon != ''">  
+               and ICON = #{icon}
+            </if>  
+            <if test="pmenuid != null and pmenuid != ''">  
+               and PMENUID = #{pmenuid}
+            </if>  
+        	<if test="menuname != null and menuname != ''">  
+               and MENUNAME = #{menuname}
+            </if>  
+            <if test="tenantId != null and tenantId != ''">  
+               and TENANTID = #{tenantId}
+            </if> 
+		</where>
+    </select> -->
+      
+</mapper>

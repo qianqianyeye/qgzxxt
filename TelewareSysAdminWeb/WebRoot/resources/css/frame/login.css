@@ -1,0 +1,174 @@
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-size: 16px;
+}
+
+ul,li,p,span,dl,dt,dd,form,input,textarea,select {
+	margin: 0px;
+	padding: 0px;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+color: #999;
+}
+
+.loginHead {
+	border-bottom: 1px solid #404040;
+	overflow: hidden;
+	padding: 10px 0;
+	background-color: #121213;
+}
+
+.login{
+	position:absolute;
+	display: table;
+	width: 100%;
+}
+
+.login .fl {
+	display: table-cell;
+	text-align:center;	
+	vertical-align: middle;
+	width:60%;
+}
+
+.login .loginbox ul li {
+	margin: 10px 0;
+}
+
+.login .loginbox ul li .intxt {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 1px;
+	border: 1px solid #9c9a9a;
+}
+
+@media screen and (max-width:1500px) {
+	.login .fr {
+		padding: 0px 0px 20px 30px;
+		display: table-cell;
+		vertical-align: middle;
+		width: 40%;
+	}
+	.login_zt{
+		width: 628px;height: 420px;
+	}
+	.login .loginword {
+		font-size: 20px;
+		padding-bottom: 10px;
+		width: 390px;
+		text-align: left;
+		/* margin: 0 auto; */
+	}
+	.login .loginbox {
+	 	width: 390px;
+		border: 1px solid #9c9a9a;
+		padding: 30px 40px;
+		border-radius: 5px; 
+		/* margin:0 auto; */
+	}
+	.login .loginbox ul {
+		width: 310px;
+		overflow: hidden;
+	}
+	.bootstrap-select.btn-group .dropdown-menu {
+		width: 310px;
+	}
+	.checkCode{
+		width:180px !important;
+		padding-left: 12px;
+	}
+}
+
+@media screen and (min-width: 1500px){
+	.login .fr {
+		padding: 0px 0px 40px 40px;
+		display: table-cell;
+		vertical-align: middle;
+		width: 40%;
+	}
+	.login .loginword {
+		font-size: 20px;
+		padding-bottom: 10px;
+		width: 450px;
+		text-align: left;
+	}
+	.login .loginbox {
+	 	width: 450px;
+		border: 1px solid #9c9a9a;
+		padding:50px 40px;
+		border-radius: 5px; 
+		/* margin:0 auto; */
+	}
+	.login .loginbox ul {
+		width: 370px;
+		overflow: hidden;
+	}
+	.bootstrap-select.btn-group .dropdown-menu {
+		width: 370px;
+	}
+	.checkCode{
+		width:240px !important;
+		padding-left: 12px;
+	}
+}
+
+.btndl {
+	width: 100%;
+	background-color: black;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 2px;
+	border: 0px;
+	padding: 15px 0;
+	margin-top: 12px;
+	cursor: pointer;
+}
+
+.logintips {
+	width: 450px;
+	border-top: 1px solid #ddd;
+	margin-top: 20px;
+	padding-top: 10px;
+	line-height: 26px;
+	font-size: 16px;
+	padding-left: 14px;
+}
+
+.foot {
+	color:#73777a;
+	background-color:black;
+	border-top: 1px solid #404040;
+	overflow: hidden;
+	padding: 20px 10px;
+	line-height: 22px;
+	position: fixed;
+	width: 100%;
+	bottom: 0px;
+	left: 0px;
+	text-align: right;
+}
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 100%;
+}
+
+
+
+.bootstrap-select>.dropdown-toggle {
+	padding: 10px 28px 10px 14px;
+}
+
+.btn {
+	font-size: 16px;
+	border: 1px solid #9c9a9a;
+	border-radius: 2px;
+}
